@@ -7,8 +7,8 @@ public class WorkHourSalaryEmployee extends Employee{
 		super(name);
 		this.hourRate = hourRate;
 	}
-
+    @Override
 	public int computeSalary() {
-		return this.hourRate*getWorkedHours();
+		return this.hourRate * getWorkedHours();
 	}
 }
