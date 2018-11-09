@@ -1,15 +1,40 @@
 package exercise1;
 
-public class Employee {
-	public int computeSalary() {
-		return 0;
+public abstract class Employee {
+
+	private String name;
+	private int sales = 0;
+	private int workedHours = 0;
+
+	public Employee(String name ){
+		this.name = name;
 	}
 
-	public void sell() { }
+	public abstract int computeSalary();
 
-	public void workOneHour() { }
+	public void sell() { this.sales += 1;}
+
+	public void workOneHour() {
+		workedHours += 1;
+	}
 
 	public String getName() {
-		return null;
+		return this.name;
+	}
+
+	public int getSales() {
+		return sales;
+	}
+
+	public void setSales(int sales) {
+		this.sales = sales;
+	}
+
+	public int getWorkedHours() {
+		return workedHours;
+	}
+
+	public void setWorkedHours(int workedHours) {
+		this.workedHours = workedHours;
 	}
 }
